@@ -1,31 +1,16 @@
 
-
-const TodoItem = () => {
+const TodoItem = ({text}) => {
 
     return(
         <>
-         <spam>V</spam>
-    <p> cortar cebolla </p>
-    <spam>X</spam>
-
-
-
     <spam>V</spam>
-    <p> cortar cebolla </p>
+    <p> {text} </p>
     <spam>X</spam>
-
-
-        <spam>V</spam>
-    <p> cortar cebolla </p>
-    <spam>X</spam>
-
-
-        <spam>V</spam>
-    <p> cortar cebolla </p>
-    <spam>X</spam>
+        
         </>
    
-           
+
+
     )
 }
 

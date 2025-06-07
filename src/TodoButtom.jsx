@@ -1,10 +1,9 @@
-
-const TodoButtom = () => {
+const TodoButton = () => {
   return (
-    <button>
-        Create New Todo     
+    <button onClick={() => console.log('Funcionando')}>
+      Create New Todo
     </button>
   );
-}
-export default TodoButtom;
-// This component is a button that can be used in a todo application.
+};
+
+export default TodoButton;
