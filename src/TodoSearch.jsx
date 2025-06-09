@@ -1,7 +1,8 @@
 
+ import "./TodoSearch.css";
 const TodoSearch = () => {
     return(
-<input type="text"
+<input className="todo-search" type="text"
 placeholder="Buscar.." />
 
     )

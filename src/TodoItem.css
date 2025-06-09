@@ -1,0 +1,32 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-text {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.todo-text.completed {
+  color: #2ecc71;
+  text-decoration: line-through;
+}
+
+.todo-text.incomplete {
+  color: #e74c3c;
+}
+
+.todo-check {
+  font-size: 1.5rem;
+  cursor: pointer;
+}

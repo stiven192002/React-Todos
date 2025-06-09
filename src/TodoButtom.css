@@ -1,0 +1,20 @@
+.todo-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #6e1235;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-button:hover {
+  background-color: #4a0d24;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
