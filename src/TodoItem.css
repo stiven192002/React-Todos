@@ -2,31 +2,47 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
-  border-bottom: 1px solid #eee;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.todo-item:last-child {
-  border-bottom: none;
+.todo-check,
+.todo-delete {
+  font-size: 1.2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* ✅ Chulito en verde si está completado */
+.todo-check.checked {
+  color: #00FF00;
+}
+
+/* Hover opcional */
+.todo-check:hover {
+  background-color: #f0f0f0;
+}
+
+.todo-delete:hover {
+  background-color: #ffe0e0;
 }
 
 .todo-text {
   flex: 1;
-  margin: 0 1rem;
+  margin: 0 12px;
+  font-size: 1rem;
+  color: #333;
 }
 
-.todo-text.completed {
-  color: #2ecc71;
+.completed {
   text-decoration: line-through;
-}
-
-.todo-text.incomplete {
-  color: #e74c3c;
-}
-
-.todo-check {
-  font-size: 1.5rem;
-  cursor: pointer;
+  color: #999;
 }

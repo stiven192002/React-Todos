@@ -1,14 +1,22 @@
 import "./TodoItem.css";
 
-const TodoItem = ({ text, completed }) => {
+const TodoItem = ({ text, completed, onToggle, onDelete }) => {
   return (
     <div className="todo-item">
-      <span className={`todo-icon ${completed ? "check" : "cross"}`}>
-        {completed ? "✔" : "✖"}
-      </span>
+      <button
+        className={`todo-check ${completed ? "checked" : ""}`}
+        onClick={onToggle}
+      >
+        ✔
+      </button>
+
       <p className={`todo-text ${completed ? "completed" : "incomplete"}`}>
         {text}
       </p>
+
+      <button className="todo-delete" onClick={onDelete}>
+        ✖
+      </button>
     </div>
   );
 };
