@@ -1,0 +1,28 @@
+.skeleton-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.skeleton-item {
+  height: 60px;
+  border-radius: 8px;
+  background: linear-gradient(
+    -90deg,
+    #eeeeee 0%,
+    #dddddd 50%,
+    #eeeeee 100%
+  );
+  background-size: 400% 400%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
