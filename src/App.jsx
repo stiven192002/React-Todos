@@ -10,7 +10,8 @@ import TodosLoading from './TodosLoading/TodosLoading.jsx';
 import TodosError from './TodosError/TodosError.jsx';
 import EmptyTodos from './EmptyTodos/EmptyTodos.jsx';
 import { useTodos } from './TodoContext/TodoContext.jsx';
-
+import Modal from './Modal/Modal.jsx';
+import TodoForm from './TodoForm/TodoForm.jsx';
 function App() {
   const {
     todos,
@@ -20,6 +21,8 @@ function App() {
     setFilter,
     toggleTodos,
     deleteTodo,
+    OpenModal,
+    setOpenModal,
   } = useTodos();
 
   const filteredTodos = todos.filter((todo) =>
@@ -51,6 +54,13 @@ function App() {
       </TodoList>
 
       <TodoButton />
+ 
+ { OpenModal && ( 
+      <Modal>
+       <TodoForm />
+      </Modal>
+    ) }
+     
     </>
   );
 }

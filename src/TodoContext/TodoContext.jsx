@@ -9,8 +9,22 @@ function useTodosProvider() {
   const [item, setItem] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+    const [OpenModal, setOpenModal ] = useState(false);
   const [filter, setFilter] = useState("");
 
+  const CloseModal = () => {
+      setOpenModal((prev) => !prev);
+  };
+
+  const addTodos = (text) => {
+    const newTodos = [...item];
+    newTodos.push({
+      text,
+      completed: false,
+    });
+    saveItem(newTodos);
+    setOpenModal(false);
+  }
   useEffect(() => {
     setTimeout(() => {
       try {
@@ -57,6 +71,10 @@ function useTodosProvider() {
     setFilter,
     toggleTodos,
     deleteTodo,
+    OpenModal,
+    setOpenModal,
+    CloseModal,
+    addTodos
   };
 }
 
